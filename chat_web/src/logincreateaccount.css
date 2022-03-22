@@ -7,6 +7,9 @@
     --switch-background-color:hsl(170, 99%, 50%);
     --switch-btn-color:hsl(170, 99%, 50%);
 
+
+    --div-width:570px;
+
 }
 
 .container{
@@ -23,11 +26,11 @@
 .switch_bar_div{
     display: flex;
     flex-direction: row;
-    width: 350px;
-    height: 30px;
+    width: var(--div-width);
+    height: auto;
     gap: 15px;
     padding: 10px;
-    margin: 0;
+    margin: 0 3px ;
     border: none;
     border-radius: 5px;
     background-color: var(--switch-background-color);
@@ -57,10 +60,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
-    min-height: 300px;
-    max-height: 500px;
-    gap: 20px;
+    width: var(--div-width);
+    height: auto;
+    gap: 40px;
     margin: 0 ;
     padding: 10px;
     border: 2px solid var(--border-color) ;
@@ -73,13 +75,15 @@
 }
 
 .box_div_active > h1{
-    font-size: 30px;
+    font-size: 40px;
+    height: fit-content;
+    width: fit-content;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .box_div_active > input{
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 2px;
     padding: 8px;
@@ -91,7 +95,8 @@
     color: var(--text-color);
 }
 .box_div_active .box_btn{
-    width: 100px;
+    width: 200px;
+    height: 50px;
     border: 2px solid var(--border-color);
     border-radius: 40px;
     font-size: 20px;
