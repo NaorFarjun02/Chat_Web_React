@@ -12,5 +12,12 @@
       "email": "mandalflik@outlook.com",
       "id": 2
     }
+  ],
+  "messages":[
+    {
+      "text":"hi",
+      "userId":1,
+      "timestamp":""
+    }
   ]
 }

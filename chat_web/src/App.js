@@ -1,10 +1,15 @@
 import "./App.css";
 import LoginCreateAccount from "./login-createaccount";
-import Profile from "./profile";
+import Chat from "./chat";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState({
+    username: "Mandalflik19",
+    password: "2",
+    email: "naorfarjun@gmail.sdf",
+    id: 1,
+  });
   let check = false;
   const createAccount = (userToCreate) => {
     console.log("create account");
@@ -28,10 +33,9 @@ function App() {
   };
   return (
     <div className="App">
-      <Profile user={currentUser} />
-      {check === true && (
-        <LoginCreateAccount createAccount={createAccount} login={login} />
-      )}
+      <Chat user={currentUser} />
+
+      {/* <LoginCreateAccount createAccount={createAccount} login={login} /> */}
     </div>
   );
 }
