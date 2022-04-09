@@ -11,13 +11,19 @@
       "password": "1",
       "email": "mandalflik@outlook.com",
       "id": 2
+    },
+    {
+      "username": "N",
+      "password": "1",
+      "email": "a@a.a",
+      "id": 3
     }
   ],
-  "messages":[
+  "messages": [
     {
-      "text":"hi",
-      "userId":1,
-      "timestamp":""
+      "text": "hi",
+      "userId": 1,
+      "timestamp": ""
     }
   ]
 }

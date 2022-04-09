@@ -3,7 +3,6 @@ import "./logincreateaccount.css";
 import { useState, useEffect } from "react";
 function LoginCreateAccount(props) {
   const switchBarClick = (e) => {
-    document.getElementsByClassName("container")[0].style.display = "none";
 
     const login_switch = document.querySelector("[data-loginswitch]");
     const create_switch = document.querySelector("[data-createswitch]");
@@ -66,11 +65,9 @@ function LoginCreateAccount(props) {
       return;
     }
     var user = checkIfUserExist();
-    // console.log(userId);
     if (user != null) {
       props.login(user);
-      // document.getElementsByClassName("container")[0].style.display = "none";
-      // setLogin({ email: "", password: "" });
+      setLogin({ email: "", password: "" });
       return;
     } else {
       alert("Email or Password are incorrect");
@@ -200,7 +197,7 @@ function LoginCreateAccount(props) {
             required
             onChange={(e) =>
               setCreateAccount({
-                username: e.target.value,
+                username: e.target.value.toUpperCase(),
                 password: createaccount.password,
                 email: createaccount.email,
               })
